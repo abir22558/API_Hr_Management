@@ -38,7 +38,7 @@ namespace HrManagement.Domain.Models
             return candidate;
         }
 
-        // Methods to update properties
+        // method to update properties
         public void Update(Email email, string firstName, string lastName, string comments,
             PhoneNumber? phoneNumber = null, CallTimeInterval? callTimeInterval = null,
             string? linkedInUrl = null, string? gitHubUrl = null)
