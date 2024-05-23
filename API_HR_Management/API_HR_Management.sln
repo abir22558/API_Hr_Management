@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HR_Management", "API_HR_Management\API_HR_Management.csproj", "{8AB59680-9B34-4A7B-9FF2-A19571EB6F41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrManagement.Domain", "HrManagement.Domain\HrManagement.Domain.csproj", "{A6CE63A2-18AC-4726-BE5A-E52F8B9D04E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8AB59680-9B34-4A7B-9FF2-A19571EB6F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AB59680-9B34-4A7B-9FF2-A19571EB6F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AB59680-9B34-4A7B-9FF2-A19571EB6F41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CE63A2-18AC-4726-BE5A-E52F8B9D04E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CE63A2-18AC-4726-BE5A-E52F8B9D04E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CE63A2-18AC-4726-BE5A-E52F8B9D04E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CE63A2-18AC-4726-BE5A-E52F8B9D04E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
