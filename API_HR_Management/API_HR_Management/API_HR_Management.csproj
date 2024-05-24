@@ -6,10 +6,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>f01f9a62-400f-4654-a153-125b10f9290d</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HrManagement.Application\HrManagement.Application.csproj" />
+    <ProjectReference Include="..\HrManagement.Infrastructure\HrManagement.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
