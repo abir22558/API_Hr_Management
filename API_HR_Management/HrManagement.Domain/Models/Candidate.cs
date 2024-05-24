@@ -3,7 +3,7 @@ using HrManagement.Domain.ValuesObjects;
 
 namespace HrManagement.Domain.Models
 {
-    public class Candidat : Entity<Email>
+    public class Candidate : Entity<Email>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -14,11 +14,11 @@ namespace HrManagement.Domain.Models
         public string Comments { get; set; }
 
         //  factory method with all initialization logic
-        public static Candidat Create(Email email, string firstName, string lastName, string comments,
+        public static Candidate Create(Email email, string firstName, string lastName, string comments,
             PhoneNumber? phoneNumber = null, CallTimeInterval? callTimeInterval = null,
             string? linkedInUrl = null, string? gitHubUrl = null)
         {
-            var candidate = new Candidat
+            var Candidatee = new Candidate
             {
                 Id = Email.Of(email.Value),
                 FirstName = firstName,
@@ -32,10 +32,10 @@ namespace HrManagement.Domain.Models
 
             if (callTimeInterval != null)
             {
-                candidate.CallTimeInterval = CallTimeInterval.Of(callTimeInterval);
+                Candidatee.CallTimeInterval = CallTimeInterval.Of(callTimeInterval);
             }
 
-            return candidate;
+            return Candidatee;
         }
 
         // method to update properties
