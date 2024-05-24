@@ -17,9 +17,17 @@ namespace API_HR_Management.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllCandidatesAsync()
         {
-            var query = new GetCandidatesQuerie();
-            var result = await _mediator.Send(query);
-            return Ok(result.Candidates);
+            try
+            {
+                var query = new GetCandidatesQuerie();
+                var result = await _mediator.Send(query);
+                return Ok(result.Candidates);
+            }
+            catch(Exception ex)
+            { 
+                return BadRequest(ex.Message);
+            }
+           
         }
 
         //Endpoint for updating or creating candidate 
@@ -30,29 +38,37 @@ namespace API_HR_Management.Controllers
         [HttpPost("upsert")]
         public async Task<IActionResult> UpsertCandidateAsync([FromBody] CandidateDto candidatDto)
         {
-            if (candidatDto == null)
+            try
             {
-                return BadRequest("Invalid candidate data.");
-            }
-            //Update Candidate
-            var candidatExistCommand = new GetCandidateByIdQuerie(candidatDto.Id);
-            var resultCandidateFromDb = await _mediator.Send(candidatExistCommand);
-
-            if (resultCandidateFromDb.CandidatDto is not null)
-            {
-                var updateCommand = new UpdateCandidateCommand(resultCandidateFromDb.CandidatDto, candidatDto);
-                var updateResult = await _mediator.Send(updateCommand);
-                if (!updateResult.IsSuccess)
+                if (candidatDto == null)
                 {
-                    return NotFound($"Candidate with Email {candidatDto.Id} is not found.");
+                    return BadRequest("Invalid candidate data.");
                 }
-                return Ok("Candidate updated successfully.");
-            }
-            //Create Candidate
-            var createCommand = new CreateCandidateCommand(candidatDto);
-            var createdId = await _mediator.Send(createCommand);
-            return Created("Created Succes with Id", createdId);
+                //Update Candidate
+                var candidatExistCommand = new GetCandidateByIdQuerie(candidatDto.Id);
+                var resultCandidateFromDb = await _mediator.Send(candidatExistCommand);
 
+                if (resultCandidateFromDb.CandidatDto is not null)
+                {
+                    var updateCommand = new UpdateCandidateCommand(resultCandidateFromDb.CandidatDto, candidatDto);
+                    var updateResult = await _mediator.Send(updateCommand);
+                    if (!updateResult.IsSuccess)
+                    {
+                        return NotFound($"Candidate with Email {candidatDto.Id} is not found.");
+                    }
+                    return Ok("Candidate updated successfully.");
+                }
+                //Create Candidate
+                var createCommand = new CreateCandidateCommand(candidatDto);
+                var createdId = await _mediator.Send(createCommand);
+                return Created("Created Succes with Id", createdId);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+           
         }
 
     }
