@@ -6,7 +6,7 @@
     <DockerPublishLocally>False</DockerPublishLocally>
     <ProjectGuid>e3cf9dea-bbe7-4c4d-b2d5-790f974929f3</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/weatherforecast</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/candidate</DockerServiceUrl>
     <DockerServiceName>api_hr_management</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
