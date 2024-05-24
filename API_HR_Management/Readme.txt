@@ -10,7 +10,7 @@ open folder path where docker-compose files are located and run :
 
 docker compose up --build 
 
-*********Main Envirement **********
+*********Main Envirement ********** ( please check dev branch for more detailled commits )
 ***in succes **************
 u should see some fake data : 
 
