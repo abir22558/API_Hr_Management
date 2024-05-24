@@ -10,8 +10,8 @@ open folder path where docker-compose files are located and run :
 
 docker compose up --build 
 
-
-***/in succes 
+*********Main Envirement **********
+***in succes **************
 u should see some fake data : 
 
 {
