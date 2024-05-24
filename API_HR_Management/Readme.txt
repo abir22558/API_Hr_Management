@@ -1,15 +1,63 @@
 
 *************** How To use ******************
+ run the app in mode Container DockerFile using  / visual stdio 2022 ( .net 8)  
 
-open folder path where docker-compose files exists and run :
+ if it didnt work : 
+
+ run build manually : 
+
+open folder path where docker-compose files are located and run :
 
 docker compose up --build 
 
-then run the app using visual stdio 2022 ( .net 8)
+
+***/in succes 
+u should see some fake data : 
+
+{
+        "id": {
+            "value": "najlae123@gmail.com"
+        },
+        "firstName": "NajjlaeIdrissi",
+        "lastName": "Sis",
+        "phoneNumber": {
+            "value": "0102030101"
+        },
+        "callTimeInterval": null,
+        "linkedInUrl": "https://www.linkedin.com/in/NajlaeZin",
+        "gitHubUrl": "https://github.com/najlae123",
+        "comments": "This candidate has excellent communication skills and a strong background in software engineering."
+    },
+    {
+        "id": {
+            "value": "jane.doe@example.com"
+        },
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "phoneNumber": null,
+        "callTimeInterval": null,
+        "linkedInUrl": "https://www.linkedin.com/in/janedoe",
+        "gitHubUrl": "https://github.com/janedoe",
+        "comments": "Another comment"
+    },
+    {
+        "id": {
+            "value": "john.doe@example.com"
+        },
+        "firstName": "John",
+        "lastName": "Doe",
+        "phoneNumber": null,
+        "callTimeInterval": null,
+        "linkedInUrl": "https://www.linkedin.com/in/johndoe",
+        "gitHubUrl": "https://github.com/johndoe",
+        "comments": "Sample comment"
+    }
+
+
 
 **********************************************
 
-to check if the app is working 
+to check if the app is working  ( I prefer postman )
 
 test with postman this endpoint to get some fake Data that i insert with hasData of ef :
 Get : api/candiate
