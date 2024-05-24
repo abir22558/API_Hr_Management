@@ -1,5 +1,4 @@
-﻿
-using HrManagement.Application.Data;
+﻿using HrManagement.Application.Data;
 using HrManagement.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
