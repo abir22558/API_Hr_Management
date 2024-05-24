@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HR_Management", "API_HR_Management\API_HR_Management.csproj", "{8AB59680-9B34-4A7B-9FF2-A19571EB6F41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_HR_Management", "API_HR_Management\API_HR_Management.csproj", "{8AB59680-9B34-4A7B-9FF2-A19571EB6F41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrManagement.Domain", "HrManagement.Domain\HrManagement.Domain.csproj", "{A6CE63A2-18AC-4726-BE5A-E52F8B9D04E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrManagement.Domain", "HrManagement.Domain\HrManagement.Domain.csproj", "{A6CE63A2-18AC-4726-BE5A-E52F8B9D04E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrManagement.Infrastructure", "HrManagement.Infrastructure\HrManagement.Infrastructure.csproj", "{653CEDFB-E81D-4682-9347-F6902D6A85D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrManagement.Infrastructure", "HrManagement.Infrastructure\HrManagement.Infrastructure.csproj", "{653CEDFB-E81D-4682-9347-F6902D6A85D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrManagement.Application", "HrManagement.Application\HrManagement.Application.csproj", "{58BA7E76-AEEF-4445-94DC-6859C37C8F98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrManagement.Application", "HrManagement.Application\HrManagement.Application.csproj", "{58BA7E76-AEEF-4445-94DC-6859C37C8F98}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E3CF9DEA-BBE7-4C4D-B2D5-790F974929F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{58BA7E76-AEEF-4445-94DC-6859C37C8F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58BA7E76-AEEF-4445-94DC-6859C37C8F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58BA7E76-AEEF-4445-94DC-6859C37C8F98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3CF9DEA-BBE7-4C4D-B2D5-790F974929F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3CF9DEA-BBE7-4C4D-B2D5-790F974929F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3CF9DEA-BBE7-4C4D-B2D5-790F974929F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3CF9DEA-BBE7-4C4D-B2D5-790F974929F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
