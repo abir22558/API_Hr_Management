@@ -1,11 +1,12 @@
 ﻿
+using HrManagement.Application.Data;
 using HrManagement.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 
 namespace HrManagement.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
