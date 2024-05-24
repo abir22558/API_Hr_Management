@@ -1,5 +1,4 @@
-﻿
-using HrManagement.Application.Dtos;
+﻿using HrManagement.Application.Dtos;
 using MediatR;
 
 namespace HrManagement.Application.Candidate.Queries
