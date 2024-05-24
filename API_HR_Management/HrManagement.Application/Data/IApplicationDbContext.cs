@@ -5,6 +5,8 @@ namespace HrManagement.Application.Data
 {
     public interface IApplicationDbContext
     {
-        DbSet<Candidate> Candidates { get; }
+        DbSet<Domain.Models.Candidate> Candidates { get; }
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+
     }
 }
